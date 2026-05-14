@@ -1,0 +1,235 @@
+/* ================= SOLICITANTE ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2f6fb0, #1b3f75);
+    color: #0f172a;
+}
+
+.solicitante-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand h1,
+.brand p {
+    margin: 0;
+}
+
+.brand h1 {
+    font-size: clamp(1.9rem, 2.5vw, 2.6rem);
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+.brand p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #eef3ff;
+    max-width: 600px;
+}
+
+.solicitante-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.solicitante-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #1b3f75;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(26, 74, 114, 0.14);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.solicitante-nav a:hover {
+    transform: translateY(-1px);
+    background: #ffec8b;
+}
+
+.solicitante-main {
+    max-width: 1200px;
+    margin: 20px auto 40px;
+    padding: 0 20px 40px;
+}
+
+.panel {
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 34px;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+.panel h2 {
+    margin-bottom: 12px;
+    color: #1b3f75;
+    font-size: 1.62rem;
+}
+
+.panel p {
+    margin-bottom: 22px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.solicitante-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.solicitante-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.solicitante-form input,
+.solicitante-form select,
+.solicitante-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 14px;
+    background: #ffffff;
+    color: #0f172a;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.solicitante-form textarea {
+    min-height: 140px;
+    resize: vertical;
+    grid-column: 1 / -1;
+}
+
+.solicitante-form input:focus,
+.solicitante-form select:focus,
+.solicitante-form textarea:focus {
+    border-color: #2f6fb0;
+    box-shadow: 0 0 0 4px rgba(47, 111, 176, 0.15);
+}
+
+.solicitante-form button {
+    grid-column: 1 / -1;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 14px;
+    background: #ffd500;
+    color: #1d1d1d;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.solicitante-form button:hover {
+    background: #e0a800;
+    transform: translateY(-1px);
+}
+
+.estado-summary {
+    overflow-x: auto;
+}
+
+.estado-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+    background: #ffffff;
+}
+
+.estado-table th,
+.estado-table td {
+    padding: 16px 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.estado-table th {
+    background: #f8fafc;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.estado-table tbody tr:nth-child(even) {
+    background: #f8fbff;
+}
+
+.estado-table tbody tr:hover {
+    background: #e2eaf6;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.info-card {
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(47, 111, 176, 0.15);
+    background: #ffffff;
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #1b3f75;
+}
+
+.info-card p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .solicitante-form {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .solicitante-header {
+        padding-top: 24px;
+    }
+
+    .solicitante-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .panel {
+        padding: 22px;
+    }
+}
